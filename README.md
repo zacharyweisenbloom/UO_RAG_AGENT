@@ -1,6 +1,6 @@
 *UO RAG Agent*
 
-This pipline is built with 4 different pieces. 
+This pipline is built with 3 different pieces. 
   1) get URLs (generate_url_list_parallel.py)
   2) crawl web pages in parallel and store in Milvus (crawl_uoregon_milvus.py)
   3) run hybrid search in Milvus and return data to open source Ollama model (streamlit_ui_local.py)
