@@ -1,19 +1,12 @@
 *UO RAG Agent*
 
 This pipline is built with 4 different pieces. 
-  1) get URLs
-  2) crawl web pages in parallel,
-  3) store in Milvus
-  4) run hybrid search in Milvus and return data to open source Ollama model
+  1) get URLs (generate_url_list_parallel.py)
+  2) crawl web pages in parallel and store in Milvus (crawl_uoregon_milvus.py)
+  3) run hybrid search in Milvus and return data to open source Ollama model (streamlit_ui_local.py)
 
-
-*Each code file below includes a short description*
-
-get_diffs_solutions/generate_url_list.py **This script crawls uoregon.edu and writes an XML url set with page hashes.**
-
-get_diffs_solutions/generate_url_list_parallel.py **This script crawls uoregon.edu with threads and writes an XML url set with page hashes.**
-
-get_diffs_solutions/thread_solution.py **This script recomputes page hashes and compares them to the saved XML using threads.**
+*File Descriptions*
+generate_url_list_parallel.py **This script crawls uoregon.edu with threads and writes an XML url set with page hashes.**
 
 get_diffs_solutions/get_crawl_diff.py **This script uses asyncio and aiohttp to compare current page hashes to the XML in parallel.**
 
@@ -25,10 +18,13 @@ local_solutions/keyword_search_milvus.py **This script runs BM25 keyword search 
 
 local_solutions/milvus_setup.py **This script creates a demo Milvus collection, inserts sample rows, and runs example queries.**
 
-local_solutions/query.py **This script queries a few rows from the Milvus demo collection and prints vector info.**
-
 local_solutions/local_ai_expert.py **This module defines a Pydantic AI agent that embeds queries with a local Ollama server and retrieves top Milvus chunks.**
 
 local_solutions/streamlit_ui_local.py **This app provides a Streamlit chat UI that runs the Pydantic AI agent with Milvus dependencies.**
+
+
+*Additional scripts for testing*
+
+local_solutions/query.py **This script queries a few rows from the Milvus demo collection and prints vector info.**
 
 local_solutions/small_test.py **This script calls a local OpenAI compatible chat endpoint and prints a tool call example.**
