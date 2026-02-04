@@ -1,1 +1,1 @@
-get_diffs_solutions/uoregon_urls_with_oregonnews.xml filter=lfs diff=lfs merge=lfs -text
+uoregon_urls_with_oregonnews.xml filter=lfs diff=lfs merge=lfs -text
