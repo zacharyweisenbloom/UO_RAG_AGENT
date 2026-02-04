@@ -2,7 +2,7 @@
 
 This project implements a RAG pipeline that crawls the University of Oregon website, chunks the data, and stores it in a Milvus vector database. This information is used in an agentic RAG system to query information about the University of Oregon.
 
-This pipline is built with 3 different pieces. 
+This pipline is split into 3 different scripts. 
   1) get URLs from (generate_url_list_parallel.py)
   2) crawl web pages in parallel and store in Milvus (crawl_uoregon_milvus.py)
   3) run hybrid search in Milvus and return data to open source Ollama model (streamlit_ui_local.py)
