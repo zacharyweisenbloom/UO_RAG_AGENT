@@ -1,7 +1,13 @@
 *UO RAG Agent*
 
-The process is to get URLs, crawl web pages in parallel, store in Milvus, and run hybrid search in Milvus.
-Each code file below includes a short description.
+This pipline is built with 4 different pieces. 
+  1) get URLs
+  2) crawl web pages in parallel,
+  3) store in Milvus
+  4) run hybrid search in Milvus and return data to open source Ollama model
+
+
+*Each code file below includes a short description*
 
 get_diffs_solutions/generate_url_list.py **This script crawls uoregon.edu and writes an XML url set with page hashes.**
 
