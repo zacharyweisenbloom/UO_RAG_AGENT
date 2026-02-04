@@ -7,7 +7,7 @@ This pipline is split into 3 different scripts.
   2) crawl web pages in parallel and store in Milvus (crawl_uoregon_milvus.py)
   3) run hybrid search in Milvus and return data to open source Ollama model (streamlit_ui_local.py)
 
-***File Descriptions***
+-----------------------------------------***File Descriptions***-----------------------------------------------------------------
 
 **generate_url_list_parallel.py**: This script crawls uoregon.edu with threads and writes an XML url set with page hashes.
 
@@ -22,7 +22,7 @@ This pipline is split into 3 different scripts.
 **streamlit_ui_local.py**: This app provides a Streamlit chat UI that runs the Pydantic AI agent with Milvus dependencies.
 
 
-***Additional scripts for testing***
+---------------------------------------***Additional scripts for testing***-------------------------------------------------------
 
 **local_solutions/query.py**: This script queries a few rows from the Milvus demo collection and prints vector info.
 
