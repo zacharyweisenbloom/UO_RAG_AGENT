@@ -7,6 +7,9 @@ This pipline is split into 3 different scripts.
   2) crawl web pages in parallel and store in Milvus (crawl_uoregon_milvus.py)
   3) run hybrid search in Milvus and return data to open source Ollama model (streamlit_ui_local.py)
 
+
+
+
 -----------------------------------------***File Descriptions***-------------------------------------------------------
 
 **generate_url_list_parallel.py**: This script crawls uoregon.edu with threads and writes an XML url set with page hashes.
